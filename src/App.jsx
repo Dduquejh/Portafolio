@@ -3,7 +3,8 @@ import './App.css';
 import { InfoContainer } from './components/InfoContainer';
 import { Separator } from './components/Separator';
 import { ListComponent } from './components/ListComponent.jsx';
-import { aboutME, projects, hobbies } from './constants.js';
+import { ContactItem } from './components/ContactItem.jsx';
+import { aboutME, projects, hobbies, contact } from './constants.js';
 
 function App() {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -74,7 +75,7 @@ function App() {
             </div>
 
             {selectedHobbie && (
-                <div className="project-info">
+                <div className="hobbies-info">
                     <InfoContainer
                         title={selectedHobbie.title} 
                         text={selectedHobbie.details}
@@ -86,9 +87,18 @@ function App() {
 
             }
 
-
-
             <Separator>Contact me</Separator>
+            <div className="list-container">
+                {contact.map((contact, index) => (
+                    <ContactItem 
+                        key={index} 
+                        name={contact.name}
+                        iconLink={contact.iconLink}
+                        link={contact.link}
+                    />
+                ))}
+            </div>
+
         </>
     );
 }
