@@ -5,64 +5,164 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #000;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
+.container {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch; /* Asegura que los hijos tengan la misma altura */
+  height: auto;
+  width: 80%;
+  margin: 0 auto;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.container .aside-container {
+  margin: 10px;
+  padding: 5px;
+  width: 300px; /* Ajusta el ancho según sea necesario */
+  flex-shrink: 0; /* Evita que el contenedor de la imagen se reduzca */
+  display: flex;
+  align-items: center; /* Centra la imagen verticalmente */
+  justify-content: center; /* Centra la imagen horizontalmente */
+  background-color: black;
+  border-radius: 15px;
 }
 
-button {
+.container .aside-container img {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  height: auto;
+}
+
+.container .section-container {
+  margin: 10px;
+  padding: 5px;
+  width: 100%;
+  max-width: 600px; /* Ajusta el ancho máximo según sea necesario */
+  flex-grow: 1; /* Permite que el contenedor de la sección crezca */
+  display: flex;
+  flex-direction: column; /* Para que el contenido dentro del section se acomode verticalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+}
+
+.container .aside-container .img-container {
+  border-radius: 20px;
+}
+
+
+
+/* Separator.css */
+.separator-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.separator-line {
+  border: 0;
+  border-top: 2px solid #ADADFF; /* Color y grosor de la línea */
+  flex-grow: 1;
+}
+
+.separator-title {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: #ADADFF; /* Color del texto */
+}
+
+
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  width: 200px; /* Ajusta el ancho según sea necesario */
+  height: auto; /* Deja que la altura se ajuste automáticamente */
+  border: 1px solid #ddd;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin: 5px;
+  overflow: hidden; /* Evita que el contenido se desborde */
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.icon-list {
+  width: 50px; /* Ajusta el tamaño del icono */
+  height: 50px;
+  margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.text-content {
+  flex: 1;
+  overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.text-content h2 {
+  font-size: 1rem; /* Ajusta el tamaño de la fuente según sea necesario */
+  margin: 0;
+  white-space: normal; /* Permite que el texto se ajuste en varias líneas */
+  overflow: hidden; /* Evita que el contenido se desborde */
+  text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto es demasiado largo */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Número máximo de líneas que quieres mostrar */
+  -webkit-box-orient: vertical;
+  line-clamp: 2; /* Propiedad estándar */
+  box-orient: vertical; /* Propiedad estándar */
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column; /* Cambia la dirección del flex para que el contenido se apile verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
   }
-  a:hover {
-    color: #747bff;
+
+  .container .aside-container {
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    margin: 0; /* Ajusta el margen si es necesario */
   }
-  button {
-    background-color: #f9f9f9;
+
+  .container .section-container {
+    width: 100%; /* El texto ocupará el 100% del ancho del contenedor */
   }
+
+  .list-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list-item {
+    width: 90%; /* Ajusta el ancho para ocupar la mayor parte de la pantalla */
+    margin: 10px 0; /* Espacio entre los elementos en vista móvil */
+  }
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column; /* Para apilar los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  margin: 0 auto;
+}
+
+.close-button {
+  margin-top: 10px; /* Ajusta el espacio superior si es necesario */
+  padding: 5px 10px; /* Ajusta el tamaño del botón según sea necesario */
+  border: none;
+  border-radius: 5px;
+  background-color: #464647; /* Ajusta el color de fondo del botón */
+  color: #fff; /* Color del texto */
+  cursor: pointer;
+  font-size: 1rem; /* Ajusta el tamaño de la fuente del botón */
+  font-weight: bold;
+}
+
+.close-button:hover {
+  background-color: #9c9cff; /* Color de fondo cuando el ratón está sobre el botón */
 }
