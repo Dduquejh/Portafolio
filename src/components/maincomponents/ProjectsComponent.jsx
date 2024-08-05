@@ -1,6 +1,6 @@
 import { Separator } from "../Separator";
 import { ListComponent } from "../ListComponent";
-import { InfoContainer } from "../InfoContainer";
+import { InfoProjectContainer } from "../InfoProjectContainer";
 
 export const ProjectsComponent = ({projects, selectedProject, handleProject, handleCloseProject}) => {
     return(
@@ -20,11 +20,12 @@ export const ProjectsComponent = ({projects, selectedProject, handleProject, han
 
             {selectedProject && (
                 <div className="project-info">
-                    <InfoContainer
+                    <InfoProjectContainer
                         title={selectedProject.title} 
                         text={selectedProject.details}
                         imgLink={selectedProject.imgLink}
-                        additionalInfo={selectedProject.additionalInfo}
+                        additonalInfo={selectedProject.additionalInfo}
+                        repoLink={selectedProject.repoLink}
                     />
                         <button className="close-button" onClick={handleCloseProject}>Close</button>
                 </div>

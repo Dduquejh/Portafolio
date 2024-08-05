@@ -1,10 +1,18 @@
 import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 
 export const Menu = () => {
   const location = useLocation();
+  const [active, setActive] = useState(false);
+  const handleToggle = () => {
+    setActive(!active);
+  }
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${active ? 'active' : ''}`}>
+      <span className='menu-toggle' onClick={handleToggle}>
+        ☰
+      </span>
       <ul className="navbar-links">
         <li>
           <Link

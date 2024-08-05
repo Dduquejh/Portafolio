@@ -7,6 +7,10 @@
   background-color: #030303;
 }
 
+html, body{
+  scroll-behavior: smooth;
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -114,7 +118,7 @@
   box-orient: vertical;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .container {
     flex-direction: column;
     align-items: center;
@@ -137,6 +141,55 @@
   .list-item {
     width: 90%;
     margin: 10px 0;
+  }
+
+  .navbar {
+    text-align: left; /* Align text to the left */
+    padding: 10px 20px; /* Add some padding */
+  }
+
+  .navbar-links {
+    display: none; /* Hide links by default */
+    flex-direction: column; /* Stack links vertically */
+    width: 100%; /* Full width */
+    background-color: #333; /* Same background as navbar */
+    position: absolute; /* Position relative to navbar */
+    top: 50px; /* Position below navbar */
+    left: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-links li {
+    display: block; /* Display links as block */
+    margin: 10px 0; /* Space between links */
+  }
+
+  .navbar-links a {
+    display: block; /* Make links full width */
+    text-align: center; /* Center text */
+    padding: 10px; /* Add padding */
+  }
+
+  .navbar-links a:hover {
+    background-color: #575757; /* Darker background on hover */
+  }
+
+  .navbar.active .navbar-links {
+    display: flex; /* Show links when navbar is active */
+  }
+
+  .menu-toggle {
+    display: block; /* Show menu toggle button */
+    font-size: 24px; /* Larger font size */
+    cursor: pointer; /* Pointer cursor */
+    color: #f2f2f2; /* Light text color */
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
   }
 }
 
@@ -164,6 +217,7 @@
   cursor: pointer;
   font-size: 1rem;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .close-button:hover {
