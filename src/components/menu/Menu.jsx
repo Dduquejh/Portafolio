@@ -1,8 +1,6 @@
-import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
 export const Menu = () => {
-  const location = useLocation();
   const [active, setActive] = useState(false);
   const handleToggle = () => {
     setActive(!active);
@@ -15,36 +13,24 @@ export const Menu = () => {
       </span>
       <ul className="navbar-links">
         <li>
-          <Link
-            to="/about"
-            className={location.pathname === "/about" ? "active" : ""}
-          >
+          <a href="#about-me" className="navbar-link" onClick={handleToggle}>
             About Me
-          </Link>
+          </a>
         </li>
         <li>
-          <Link
-            to="/projects"
-            className={location.pathname === "/projects" ? "active" : ""}
-          >
+          <a href="#projects" className="navbar-link" onClick={handleToggle}>
             Projects
-          </Link>
+          </a>
         </li>
         <li>
-          <Link
-            to="/hobbies"
-            className={location.pathname === "/hobbies" ? "active" : ""}
-          >
+          <a href="#hobbies" className="navbar-link" onClick={handleToggle}>
             Hobbies
-          </Link>
+          </a>
         </li>
         <li>
-          <Link
-            to="/contact"
-            className={location.pathname === "/contact" ? "active" : ""}
-          >
+          <a href="#contact-me" className="navbar-link" onClick={handleToggle}>
             Contact
-          </Link>
+          </a>
         </li>
       </ul>
     </nav>

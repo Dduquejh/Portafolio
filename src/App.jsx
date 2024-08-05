@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import './App.css';
-//import { NavBar } from './components/NavBar';
 import { aboutME, projects, hobbies, contact } from './constants.js';
-import { RouterR } from './components/menu/RouterR.jsx';
+import { AboutMeComponent } from './components/maincomponents/AboutMeComponent.jsx';
+import { ProjectsComponent } from './components/maincomponents/ProjectsComponent.jsx';
+import { HobbiesComponent } from './components/maincomponents/HobbiesComponent.jsx';
+import { ContactMeComponent } from './components/maincomponents/ContactMeComponent.jsx';
+import { Menu } from './components/menu/Menu.jsx';
 
 function App() {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -26,20 +29,25 @@ function App() {
 
 
     return (
-        <>  
+        <>
+            <Menu />
+            <div className="app-container">
+                <section id="about-me">
+                    <AboutMeComponent title={aboutME.title} text={aboutME.text} imgLink={aboutME.imgLink} />
+                </section>
 
-          <RouterR
-                aboutME={aboutME}
-                projects={projects}
-                hobbies={hobbies}
-                contact={contact}
-                selectedProject={selectedProject}
-                handleProject={handleProject}
-                handleCloseProject={handleCloseProject}
-                selectedHobbie={selectedHobbie}
-                handleHobbie={handleHobbie}
-                handleCloseHobbie={handleCloseHobbie}
-            />
+                <section id="projects">
+                    <ProjectsComponent projects={projects} selectedProject={selectedProject} handleProject={handleProject} handleCloseProject={handleCloseProject}/>
+                </section>
+
+                <section id="hobbies">
+                    <HobbiesComponent hobbies={hobbies} selectedHobbie={selectedHobbie} handleHobbie={handleHobbie} handleCloseHobbie={handleCloseHobbie}/>
+                </section>
+
+                <section id="contact-me">
+                    <ContactMeComponent contact={contact}/>
+                </section>
+            </div>
         </>
     );
 }

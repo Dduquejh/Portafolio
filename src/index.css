@@ -9,6 +9,9 @@
 
 html, body{
   scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -118,81 +121,6 @@ html, body{
   box-orient: vertical;
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .container .aside-container {
-    width: 100%;
-    margin: 0;
-  }
-
-  .container .section-container {
-    width: 100%;
-  }
-
-  .list-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .list-item {
-    width: 90%;
-    margin: 10px 0;
-  }
-
-  .navbar {
-    text-align: left; /* Align text to the left */
-    padding: 10px 20px; /* Add some padding */
-  }
-
-  .navbar-links {
-    display: none; /* Hide links by default */
-    flex-direction: column; /* Stack links vertically */
-    width: 100%; /* Full width */
-    background-color: #333; /* Same background as navbar */
-    position: absolute; /* Position relative to navbar */
-    top: 50px; /* Position below navbar */
-    left: 0;
-    padding: 0;
-    margin: 0;
-  }
-
-  .navbar-links li {
-    display: block; /* Display links as block */
-    margin: 10px 0; /* Space between links */
-  }
-
-  .navbar-links a {
-    display: block; /* Make links full width */
-    text-align: center; /* Center text */
-    padding: 10px; /* Add padding */
-  }
-
-  .navbar-links a:hover {
-    background-color: #575757; /* Darker background on hover */
-  }
-
-  .navbar.active .navbar-links {
-    display: flex; /* Show links when navbar is active */
-  }
-
-  .menu-toggle {
-    display: block; /* Show menu toggle button */
-    font-size: 24px; /* Larger font size */
-    cursor: pointer; /* Pointer cursor */
-    color: #f2f2f2; /* Light text color */
-  }
-}
-
-@media (min-width: 769px) {
-  .menu-toggle {
-    display: none;
-  }
-}
-
 .project-info {
   display: flex;
   flex-direction: column;
@@ -256,6 +184,7 @@ html, body{
   background-color: #333; /* Dark background color */
   padding: 10px; /* Add some padding */
   text-align: center; /* Center the links */
+  border-radius: 10px;
 }
 
 .navbar-links {
@@ -291,7 +220,116 @@ html, body{
   text-decoration: underline;
 }
 
-#about, #projects, #hobbies, #contact {
-  padding: 50px;
-  min-height: 100vh;
+.app-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+#about-me, #projects, #hobbies, #contact-me {
+  scroll-snap-align: start;
+  height: 100vh;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 20px 20px;
+  box-sizing: border-box;
+  transition: background-color 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  body, html{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .aside-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .container .section-container {
+    width: 100%;
+  }
+
+  .list-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list-item {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .navbar {
+    text-align: left; /* Align text to the left */
+    padding: 10px 20px; /* Add some padding */
+    border-radius: 10px;
+  }
+
+  .navbar-links {
+    display: none; /* Hide links by default */
+    flex-direction: column; /* Stack links vertically */
+    width: 100%; /* Full width */
+    background-color: #333; /* Same background as navbar */
+    position: absolute; /* Position relative to navbar */
+    top: 50px; /* Position below navbar */
+    left: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-links li {
+    display: block; /* Display links as block */
+    margin: 10px 0; /* Space between links */
+  }
+
+  .navbar-links a {
+    display: block; /* Make links full width */
+    text-align: center; /* Center text */
+    padding: 10px; /* Add padding */
+  }
+
+  .navbar-links a:hover {
+    background-color: #575757; /* Darker background on hover */
+  }
+
+  .navbar.active .navbar-links {
+    display: flex; /* Show links when navbar is active */
+  }
+
+  .menu-toggle {
+    display: block; /* Show menu toggle button */
+    font-size: 24px; /* Larger font size */
+    cursor: pointer; /* Pointer cursor */
+    color: #f2f2f2; /* Light text color */
+  }
+
+  #about-me, #projects, #hobbies, #contact-me {
+    width: auto;
+    height: auto;
+    scroll-snap-align: none;
+  }
+
+  .app-container {
+    overflow-y: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
 }
