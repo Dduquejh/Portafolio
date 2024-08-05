@@ -1,4 +1,4 @@
-export const InfoContainer = ({ title, text, imgLink }) => {
+export const InfoContainer = ({ title, text, imgLink}) => {
     const altImg = title + " image";
     return (
         <>

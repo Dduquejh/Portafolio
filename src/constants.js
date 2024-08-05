@@ -9,13 +9,14 @@ export const projects = [
         title: "Game with PaperJS",
         icon: "./src/assets/icons/projectspaperjs.png",
         details: "Change this",
-        imgLink: "./src/assets/icons/projectspaperjs.png"
+        imgLink: "./src/assets/icons/projectspaperjs.png",
+        additionalInfo: ["js", "html", "css"]
     },
     {
         title: "Prueba 1",
         icon: "./src/assets/icons/projectspaperjs.png",
         details: "Change this",
-        imgLink: "./src/assets/icons/projectspaperjs.png"
+        imgLink: ""
     },
     {
         title: "Prueba 2",
