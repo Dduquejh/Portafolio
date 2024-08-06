@@ -17,6 +17,7 @@ export const ProjectsComponent = ({projects, selectedProject, handleProject, han
                     </ListComponent>
                 ))}   
             </div>
+            <p className="note-text">* Click on each project for more information</p>
 
             {selectedProject && (
                 <div className="project-info">

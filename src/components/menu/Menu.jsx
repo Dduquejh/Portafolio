@@ -18,6 +18,11 @@ export const Menu = () => {
           </a>
         </li>
         <li>
+          <a href="#skills" className="navbar-link" onClick={handleToggle}>
+            My skills
+          </a>
+        </li>
+        <li>
           <a href="#projects" className="navbar-link" onClick={handleToggle}>
             Projects
           </a>

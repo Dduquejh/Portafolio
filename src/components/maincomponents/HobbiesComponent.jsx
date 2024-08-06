@@ -18,6 +18,7 @@ export const HobbiesComponent = ({hobbies, selectedHobbie, handleHobbie, handleC
                     </ListComponent>
                 ))}
             </div>
+            <p className="note-text">* Click on each hobbie for more information</p>
 
             {selectedHobbie && (
                 <div className="hobbies-info">

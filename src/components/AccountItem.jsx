@@ -1,4 +1,4 @@
-export const ContactItem = ({ name, iconLink, link }) => {
+export const AccountItem = ({ name, iconLink, link }) => {
     const altIcon = name + " contact";
     return (
         <div className="list-item contact-item" onClick={() => window.open(link.startsWith('http') ? link : `https://${link}`, "_blank")}>

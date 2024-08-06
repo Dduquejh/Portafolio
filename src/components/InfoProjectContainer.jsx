@@ -1,3 +1,5 @@
+import { SkillItem } from "./SkillItem";
+
 export const InfoProjectContainer = ({ title, text, imgLink, additonalInfo, repoLink}) => {
     const altImg = title + " image";
     return (
@@ -14,7 +16,7 @@ export const InfoProjectContainer = ({ title, text, imgLink, additonalInfo, repo
                     <h2>Technologies</h2>
                     <ul>
                         {additonalInfo.map((info, index) => {
-                            return <li key={index}>{info}</li>
+                            return <SkillItem key={index} name={info}/>
                         })}
                     </ul>
                 </section>

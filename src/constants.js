@@ -4,6 +4,32 @@ export const aboutME = {
     imgLink: "./src/assets/img/personalPhoto.jpg"
 }
 
+export const skills = [
+    {
+        name: "Java",
+        level: "Medium",
+        details: "Some text to describe the skill",
+    },
+    {
+        name: "Python",
+    },
+    {
+        name: "SQL",
+    },
+    {
+        name: "HTML",
+    },
+    {
+        name: "CSS",
+    },
+    {
+        name: "JavaScript",
+    },
+    {
+        name: "React"
+    },
+]
+
 export const projects = [
     {
         title: "Game with PaperJS",
@@ -11,7 +37,7 @@ export const projects = [
         details: "This is a game made with PaperJS. The objective of the game is to avoid the obstacles and get the highest score possible. The game has a start screen, a game screen, and an end screen. The game has a score counter and a restart button. I made this project with a partner",
         imgLink: "./src/assets/icons/projectspaperjs.png",
         repoLink: "https://github.com/Dduquejh/PaperJSComputacion",
-        additionalInfo: ["JS", "HTML", "CSS"]
+        additionalInfo: ["JavaScript", "HTML", "CSS"]
     },
     {
         title: "Ere-Interpreter",
@@ -38,7 +64,7 @@ export const hobbies = [
     },
 ]
 
-export const contact = [
+export const accounts = [
     {
         name: "GitHub",
         iconLink: "src/assets/icons/contactGitHub.png",
@@ -50,3 +76,5 @@ export const contact = [
         link: "www.linkedin.com/in/dduquejh"
     }
 ]
+
+export const email = "johandanielduquehernandez@gmail.com"
