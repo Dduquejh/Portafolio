@@ -1,7 +1,7 @@
 export const aboutME = {
     title: "Johan Daniel Duque Hernández",
-    text: "I'm a Systems and Computing engineer student at the Universidad EIA. I'm always looking for new opportunities to grow and improve my skills.npm ",
-    imgLink: "./assets/img/personalPhoto.jpg"
+    text: "I'm a Systems and Computing engineer student at the Universidad EIA. I'm always looking for new opportunities to grow and improve my skills.",
+    imgLink: "personalPhoto.jpg"
 }
 
 export const skills = [
@@ -17,7 +17,7 @@ export const skills = [
     },
     {
         name: "SQL",
-        level: "Advanced",
+        level: "Advnpmanced",
         details: "I am skilled in working with relational databases (SQL), with a deep understanding of writing complex queries, optimizing performance, manipulating data, and designing efficient database schemas. I can also implement advanced features such as stored procedures, triggers, and manage database security and transactions effectively.",
     },
     {
@@ -42,46 +42,46 @@ export const skills = [
     },
     {
         name: "Docker",
-        level: "Medium",
+        level: "Beginner",
         details: "I have intermediate skills in Docker, with experience in creating and managing Docker images and containers. I am proficient in using Docker Compose for defining and running multi-container applications. I can configure networks and volumes, and I understand how to monitor and troubleshoot containers. Additionally, I follow basic security practices and have experience integrating Docker with CI/CD pipelines.",
     },
     {
         name: "Git",
-        level: "Medium",
-        details: "Some text to describe the skill",
+        level: "Intermediate",
+        details: "I have intermediate skills in Git, with experience managing branches, merging changes, and resolving conflicts. I am proficient in reviewing and navigating commit history using commands like git log and git diff. I can handle collaboration tasks such as pull requests, syncing with remote repositories, and managing repository settings. I am also familiar with Git workflows, tagging, and advanced features like rebasing and cherry-picking.",
     },
     {
         name: "Linux",
-        level: "Medium",
-        details: "Some text to describe the skill",
+        level: "Intermediate",
+        details: "I have intermediate skills in Linux, with experience in managing packages, file systems, and user permissions. I am proficient in handling processes and services, configuring networks, and automating tasks with cron and shell scripts. I can navigate and edit system configuration files and diagnose network issues using standard tools.",
     }
 ]
 
 export const projects = [
     {
         title: "Game with PaperJS",
-        icon: "./assets/icons/projectspaperjs.png",
+        icon: "projectspaperjs.png",
         details: "This is a game made with PaperJS. The objective of the game is to avoid the obstacles and get the highest score possible. The game has a start screen, a game screen, and an end screen. The game has a score counter and a restart button. I made this project with a partner",
-        imgLink: "./assets/icons/projectspaperjs.png",
+        imgLink: "personalPhoto.jpg",
         repoLink: "https://github.com/Dduquejh/PaperJSComputacion",
         additionalInfo: ["JavaScript", "HTML", "CSS"]
     },
     {
         title: "Ere-Interpreter",
-        icon: "./assets/icons/projectspaperjs.png",
+        icon: "projectspaperjs.png",
         details: "This is a project made with a partner. The Ere interpreter is a interpreter that we created using Java.",
         imgLink: "",
         repoLink: "https://github.com/Dduquejh/Ere-Interpreter",
-        additionalInfo: ["java"]
+        additionalInfo: ["Java"]
     },
 ]
 
 export const hobbies = [
     {
         title: "Music",
-        icon: "./assets/icons/hobbiesmusic.png",
+        icon: "hobbiesmusic.png",
         details: "",
-        imgLink: "./assets/icons/hobbiesmusic.png"
+        imgLink: "personalPhoto.jpg",
     },
     {
         title: "Hobby 2",
@@ -94,12 +94,12 @@ export const hobbies = [
 export const accounts = [
     {
         name: "GitHub",
-        iconLink: "./assets/icons/contactGitHub.png",
+        icon: "contactGitHub.png",
         link: "https://github.com/Dduquejh"
     },
     {
         name: "LinkedIn",
-        iconLink: "./assets/icons/contactLinkedIn.png",
+        icon: "contactLinkedIn.png",
         link: "www.linkedin.com/in/dduquejh"
     }
 ]

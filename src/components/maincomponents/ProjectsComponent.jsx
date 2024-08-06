@@ -7,15 +7,18 @@ export const ProjectsComponent = ({projects, selectedProject, handleProject, han
         <>
             <Separator>Projects</Separator>
             <div className="list-container">
-                {projects.map((project, index) => (
-                    <ListComponent 
-                        key={index} 
-                        iconLink={project.icon}
-                        onClick={() => handleProject(project)}
-                    >
-                        {project.title}
-                    </ListComponent>
-                ))}   
+            {   projects.map((project, index) => {
+                    const iconLink = new URL(`../../assets/icons/${project.icon}`, import.meta.url).href;
+                    return (
+                        <ListComponent 
+                            key={index} 
+                            iconLink={iconLink}
+                            onClick={() => handleProject(project)}
+                        >
+                            {project.title}
+                        </ListComponent>
+                    );
+                })}   
             </div>
             <p className="note-text">* Click on each project for more information</p>
 
@@ -24,7 +27,7 @@ export const ProjectsComponent = ({projects, selectedProject, handleProject, han
                     <InfoProjectContainer
                         title={selectedProject.title} 
                         text={selectedProject.details}
-                        imgLink={selectedProject.imgLink}
+                        imgLink={new URL(`../../assets/img/${selectedProject.imgLink}`, import.meta.url).href}
                         additonalInfo={selectedProject.additionalInfo}
                         repoLink={selectedProject.repoLink}
                     />

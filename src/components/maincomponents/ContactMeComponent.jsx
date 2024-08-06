@@ -13,7 +13,7 @@ export const ContactMeComponent = ({account, email}) => {
                     <AccountItem 
                         key={index} 
                         name={account.name}
-                        iconLink={account.iconLink}
+                        iconLink={new URL(`../../assets/icons/${account.icon}`, import.meta.url).href}
                         link={account.link}
                     />
                 ))}
