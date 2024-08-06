@@ -62,32 +62,55 @@ export const projects = [
         title: "Game with PaperJS",
         icon: "projectspaperjs.png",
         details: "This is a game made with PaperJS. The objective of the game is to avoid the obstacles and get the highest score possible. The game has a start screen, a game screen, and an end screen. The game has a score counter and a restart button. I made this project with a partner",
-        imgLink: "personalPhoto.jpg",
+        imgLink: "paperjs.png",
         repoLink: "https://github.com/Dduquejh/PaperJSComputacion",
         additionalInfo: ["JavaScript", "HTML", "CSS"]
     },
     {
         title: "Ere-Interpreter",
-        icon: "projectspaperjs.png",
-        details: "This is a project made with a partner. The Ere interpreter is a interpreter that we created using Java.",
-        imgLink: "",
+        icon: "projectsinterpreter.png",
+        details: "This is a project made with a partner. The Ere interpreter is a interpreter that we created using Java. The interpreter supports basic operations, variable assignment, function creation and conditionals, but I don't remember how to declare these",
+        imgLink: "interpreter.png",
         repoLink: "https://github.com/Dduquejh/Ere-Interpreter",
         additionalInfo: ["Java"]
     },
+    {
+        title: "Quadtree",
+        icon: "projectsquadtree.png",
+        details: "This is a project made with some partners for the class Data structures. The Quadtree is a data structure that we implemented using Java. The purpose of the project is the ability to compress and decompress images, reconstructing the image by group of pixels.",
+        imgLink: "quadtree.png",
+        repoLink: "https://github.com/DavidBetancurRamirez/QuadTree",
+        additionalInfo: ["Java"]
+
+    },
+    {
+        title: "Database Project",
+        icon: "SQL.png",
+        details:"This is a project carried out with some classmates for the Databases class. The project is a database for an online educational platform. The corresponding class diagram is made, the creation of tables, queries, stored procedures, triggers, among others. ",
+        imgLink: "databaseProject.png",
+        repoLink: "https://github.com/Santy30-Bull/BD", 
+        additionalInfo: ["SQL"]
+    }
 ]
 
 export const hobbies = [
     {
         title: "Music",
         icon: "hobbiesmusic.png",
-        details: "",
-        imgLink: "personalPhoto.jpg",
+        details: "Life without music is boring, it allows me to concentrate, to find unique moments and mainly to escape from reality. Given this, I keep doing things almost all the time while listening to music, doing work, while playing, or rather in any situation.",
+        imgLink: "music.gif",
     },
     {
-        title: "Hobby 2",
-        icon: "./assets/icons/hobbiesmusic.png",
-        details: "Change this",
-        imgLink: "./assets/icons/hobbiesmusic.png"
+        title: "Video games",
+        icon: "hobbiesVideogames.png",
+        details: "When you are stressed or bored you have to find something to entertain you or calm you down. In my case, apart from music, it's video games. I don't have a favorite genre, but I'm more of a one-time gamer. If I like it, I keep playing it, otherwise it's archived for when I have nothing else to play or want to try something different. One thing I'm sure of is that the Grand Theft Auto saga is one of the best",
+        imgLink: "videoGames.jpeg"
+    },
+    {
+        title: "Cars",
+        icon: "hobbiesCars.png",
+        details: "This hobby comes from my dad, that's why I love spending time with him and my brother when it comes to cars, we all like them and enjoy them equally. There's nothing better than the 3 of us 'fixing' something on a car, it's just laughter, anger, good times and learning from 2 very important figures for me. I love classic cars and racing, especially rally, those drivers are crazy.",
+        imgLink: "cars.gif"
     },
 ]
 
