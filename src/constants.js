@@ -17,7 +17,7 @@ export const skills = [
     },
     {
         name: "SQL",
-        level: "Advnpmanced",
+        level: "Intermediate",
         details: "I am skilled in working with relational databases (SQL), with a deep understanding of writing complex queries, optimizing performance, manipulating data, and designing efficient database schemas. I can also implement advanced features such as stored procedures, triggers, and manage database security and transactions effectively.",
     },
     {

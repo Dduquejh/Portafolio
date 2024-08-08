@@ -58,7 +58,7 @@ function App() {
 
 
     return (
-        <>
+        <div className='main-container'>
             <Menu />
             <div className="app-container">
                 <section id="about-me">
@@ -82,7 +82,7 @@ function App() {
                 </section>
             </div>
 
-        </>
+        </div>
     );
 }
 
